@@ -1,0 +1,181 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body> -->
+<!-- <input type="text" placeholder="Name" onchange="Hello(event)"> -->
+<!-- <button onclick="Decrement()"> - </button>
+    <p id="number"></p>
+    <button onclick="Increment()"> + </button>
+    <button onclick="Reset()"> Reset</button> -->
+<!-- <button onclick="Greet()">Greet</button> -->
+<!-- <input onchange="AddTodoLists(event)">
+    <ul id="container">
+
+    </ul>
+    <button onclick="DeleteFirstItem()"> Delete First Item</button>
+    <button onclick="DeleteLastItem()"> Delete Last Item</button>
+
+</body>
+
+<script src="index.js">
+
+    const idElement = document.getElementById("greet");
+    const Greet = () => {
+        idElement.textContent = ("Hello");
+    }
+
+    let count = 0;
+    const idElement = document.getElementById("number");
+    idElement.textContent = count;
+    const Increment = () => {
+        count++;
+        idElement.textContent = count;
+    }
+    const Decrement = () => {
+        count--;
+        idElement.textContent = count;
+    }
+    const Reset = () => {
+        count = 0;
+        idElement.textContent = count;
+    } -->
+<!-- // console.log(document);
+    // const idElement = document.getElementById("number");
+    // idElement.textContent = "hi";
+    // idElement.innerHTML = "<h1>Header</h1>" //can use that type
+    // console.log(idElement); -->
+
+<!-- const Rooms = ["hi", 1, "test", 5];
+Rooms.push("1");
+Rooms.push("2");
+console.log(Rooms);
+Rooms.pop();
+console.log(Rooms);
+Rooms.shift(); //Extract first index value
+console.log(Rooms);
+Rooms.unshift("I am here");
+console.log(Rooms);
+// Rooms[Rooms.length] = 6;
+
+const Hello = (e) => {
+console.log("Hello " + e.target.value)
+alert("Hello, " + e.target.value);
+}
+
+console.log("Hello World");
+//var, let(give as you like and can change), const(can delcare one time, can't change)
+
+let Sera = "Hello Singapore";
+console.log(Sera);
+
+Sera = 17;
+console.log(Sera);
+
+const Jodarn = "Hello Germany";
+console.log(Jodarn);
+
+// function Greet(name) {
+// console.log("Hello " + name);
+// }
+// const Greet = (name) => {
+// console.log(name);
+// }
+// let name = "Thet Htar Thu Zar";
+// Greet(name);
+
+let num1 = 2;
+let num2 = 3
+console.log(num1 + num2);
+
+// function AddTwoNumber(num1, num2) {
+// console.log(num1 + num2);
+// }
+
+const AddTwoNumber = (num1, num2) => {
+console.log(num1 + num2);
+}
+AddTwoNumber(2, 1);
+
+</script>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-dark">
+    <div
+        class="position-absolute top-50 start-50 translate-middle row border border-secondary border-opacity-50 rounded p-2 w-25">
+        <div class="p-1 col-9">
+            <input class="form-control" id="Input">
+        </div>
+        <div class="p-1 col-3">
+            <button class="btn btn-secondary w-100" onclick="Calculate()">=</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterNumber('1')">1</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterNumber('2')">2</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterNumber('3')">3</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterOperator('+')">+</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterNumber('4')">4</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterNumber('5')">5</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterNumber('6')">6</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterOperator('-')">-</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterNumber('7')">7</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterNumber('8')">8</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterNumber('9')">9</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterOperator('*')">*</button>
+        </div>
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterNumber('0')">0</button>
+        </div>
+        <div class="col-6 p-1">
+            <button class="btn btn-secondary w-100" onclick="Clear()">Clear</button>
+        </div>
+
+        <div class="col-3 p-1">
+            <button class="btn btn-secondary w-100" onclick="EnterOperator('/')">/</button>
+        </div>
+    </div>
+</body>
+<!-- <script src="test.js"></script> -->
+<script src="calculator.js"></script>
+
+</html>
